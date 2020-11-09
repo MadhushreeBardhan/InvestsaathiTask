@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+
+<h3>Home Page</h3>
+
+<!-- Return -->
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>AHProcess</th>
+            <th>AfterHours</th>
+            <th>AtMarket</th>
+            <th>BrokerOrderId</th>
+            <th>BrokerOrderTime</th>
+            <th>BuySell</th>
+            <th>DelvIntra</th>
+            <th>DisClosedQty</th>
+            <th>Exch</th>
+            <th>ExchOrderID</th>
+            <th>ExchOrderTime</th>
+            <th>ExchType</th>
+            <th>OldorderQty</th>
+            <th>OrderRequesterCode</th>
+            <th>OrderStatus</th>
+            <th>OrderValidUpto</th>
+            <th>OrderValidity</th>
+            <th>PendingQty</th>
+            <th>Qty</th>
+            <th>Rate</th>
+            <th>RequestType</th>
+            <th>SLTriggerRate</th>
+            <th>SLTriggered</th>
+            <th>SMOProfitRate</th>
+            <th>SMOSLLimitRate</th>
+            <th>SMOSLTriggerRate</th>
+            <th>SMOTrailingSL</th>
+            <th>ScripCode</th>
+            <th>ScripName</th>
+            <th>TerminalId</th>
+            <th>TradedQty</th>
+            <th>WithSL</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for transaction in data %}
+         <tr>
+            <td>{{ transaction.AHProcess }}</td>
+            <td>{{ transaction.AfterHours }}</td>
+            <td>{{ transaction.AtMarket }}</td>
+            <td>{{ transaction.BrokerOrderId }}</td>
+            <td>{{ transaction.BrokerOrderTime }}</td>
+            <td>{{ transaction.BuySell }}</td>
+            <td>{{ transaction.DelvIntra }}</td>
+            <td>{{ transaction.DisClosedQty }}</td>
+            <td>{{ transaction.Exch }}</td>
+            <td>{{ transaction.ExchOrderID }}</td>
+            <td>{{ transaction.ExchOrderTime }}</td>
+            <td>{{ transaction.ExchType }}</td>
+            <td>{{ transaction.OldorderQty }}</td>
+            <td>{{ transaction.OrderRequesterCode }}</td>
+            <td>{{ transaction.OrderStatus }}</td>
+            <td>{{ transaction.OrderValidUpto }}</td>
+            <td>{{ transaction.OrderValidity }}</td>
+            <td>{{ transaction.PendingQty }}</td>
+            <td>{{ transaction.Qty }}</td>
+            <td>{{ transaction.Rate }}</td>
+            <td>{{ transaction.RequestType }}</td>
+            <td>{{ transaction.SLTriggerRate }}</td>
+            <td>{{ transaction.SLTriggered }}</td>
+            <td>{{ transaction.SMOProfitRate }}</td>
+            <td>{{ transaction.SMOSLLimitRate }}</td>
+            <td>{{ transaction.SMOSLTriggerRate }}</td>
+            <td>{{ transaction.SMOTrailingSL }}</td>
+            <td>{{ transaction.ScripCode }}</td>
+            <td>{{ transaction.ScripName }}</td>
+            <td>{{ transaction.TerminalId }}</td>
+            <td>{{ transaction.TradedQty }}</td>
+            <td>{{ transaction.WithSL }}</td>
+        </tr>
+        {% endfor %}
+       
+    </tbody>
+</table>
+
+
+
+{% endblock %}
